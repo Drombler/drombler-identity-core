@@ -5,17 +5,22 @@
  */
 package org.drombler.identity.core;
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+
 /**
  *
  * @author Florian
  */
+@JsonSerialize(converter = DromblerIdToStringConverter.class)
+@JsonDeserialize(converter = StringToDromblerIdConverter.class)
 public interface DromblerId {
     String getDromblerIdString();
     
     String getDromblerIdFormatted();
-    
+
     DromblerIdentityProvider getDromblerIdentityProvider();
-    
+
     DromblerIdType getType();
     
 }

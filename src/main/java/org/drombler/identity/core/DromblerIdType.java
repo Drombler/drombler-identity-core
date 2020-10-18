@@ -11,5 +11,5 @@ package org.drombler.identity.core;
  */
 public enum DromblerIdType {
     USER,
-    COMPANY; //TODO: ENTERPRISE? Other?
+    COMPANY; //TODO: ENTERPRISE? Other? ORGANIZATION?
 }
